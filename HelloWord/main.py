@@ -1,4 +1,5 @@
 from dotenv import load_dotenv
+from langchain_core.messages import HumanMessage
 from langgraph.graph import MessagesState, StateGraph, END
 from nodes import run_agent_reasoning, tool_node
 load_dotenv()
@@ -40,3 +41,10 @@ app = graph.compile()
 
 # Generate graph visualization
 app.get_graph().draw_mermaid_png(output_file_path="graph.png")
+
+
+if __name__ == "__main__":
+    content = "What is the temperature in Tokyo? List it and then triple it"
+    messages = {"messages": [HumanMessage(content=content)]}
+    res = app.invoke(messages)
+    print(res["messages"][LAST].content)
