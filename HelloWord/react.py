@@ -8,8 +8,8 @@ load_dotenv()
 @tool
 def triple(num: float) -> float:
     """
-    Param num: The number to triple.
-    Returns: The number tripled.
+    Param num: The float number to triple.
+    Returns: The float number tripled.
     """
     return num * 3
 
