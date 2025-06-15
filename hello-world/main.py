@@ -1,7 +1,8 @@
 from dotenv import load_dotenv
 from langchain_core.messages import HumanMessage
-from langgraph.graph import MessagesState, StateGraph, END
+from langgraph.graph import END, MessagesState, StateGraph
 from nodes import run_agent_reasoning, tool_node
+
 load_dotenv()
 
 AGENT_REASON = "agent_reason"
@@ -28,10 +29,7 @@ graph.add_node(ACT, tool_node)
 graph.set_entry_point(AGENT_REASON)
 
 # Add conditional edges
-graph.add_conditional_edges(AGENT_REASON, should_continue, {
-    END: END,
-    ACT: ACT
-})
+graph.add_conditional_edges(AGENT_REASON, should_continue, {END: END, ACT: ACT})
 
 # Add edge from ACT to AGENT_REASON
 graph.add_edge(ACT, AGENT_REASON)
