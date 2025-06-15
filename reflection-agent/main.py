@@ -1,8 +1,7 @@
-from chains import generate_chain, reflect_chain
-from langgraph.graph import END, MessageGraph
-from langchain_core.messages import BaseMessage, HumanMessage
 from typing import List, Sequence
-
+from langchain_core.messages import BaseMessage, HumanMessage
+from langgraph.graph import END, MessageGraph
+from chains import generate_chain, reflect_chain
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -36,7 +35,7 @@ builder.add_conditional_edges(GENERATE, should_continue)
 builder.add_edge(REFLECT, GENERATE)
 
 graph = builder.compile()
-print(graph.get_graph().draw_mermaid())
+graph.get_graph().draw_mermaid_png(output_file_path="graph.png")
 graph.get_graph().print_ascii()
 
 if __name__ == "__main__":
