@@ -1,5 +1,5 @@
 [project]
-name = "reflectionagent"
+name = "reflection-agent"
 version = "0.1.0"
 description = ""
 authors = [
@@ -8,13 +8,13 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.12,<4.0"
 dependencies = [
-    "langchain (>=0.3.25,<0.4.0)",
-    "langgraph (>=0.4.8,<0.5.0)",
-    "langchain-openai (>=0.3.23,<0.4.0)",
     "python-dotenv (>=1.1.0,<2.0.0)",
+    "langchain (>=0.3.25,<0.4.0)",
+    "langchain-openai (>=0.3.23,<0.4.0)",
+    "langgraph (>=0.4.8,<0.5.0)",
+    "grandalf (>=0.8,<0.9)",
     "black (>=25.1.0,<26.0.0)",
-    "isort (>=6.0.1,<7.0.0)",
-    "langchain-tavily (>=0.2.2,<0.3.0)"
+    "isort (>=6.0.1,<7.0.0)"
 ]
 
 
