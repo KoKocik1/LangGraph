@@ -3,6 +3,8 @@
 This project aims to facilitate the creation of enhanced responses through critical analysis and revision, implemented with the help of language models and structured tools. It's designed for developers or researchers involved in natural language processing, particularly those working on question answering systems.
 
 ![Agent Flowchart](Schema.png)
+![Agent Flowchart](graph.png)
+
 [Read more about Reflection Agents](https://blog.langchain.com/reflection-agents/)
 
 ## Table of Contents
