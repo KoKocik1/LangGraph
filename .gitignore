@@ -87,3 +87,5 @@ wheels/
 *.egg
 
 .chroma/
+
+.langgraph/
