@@ -7,6 +7,13 @@ This project implements an advanced Retrieval-Augmented Generation (RAG) system 
 
 [Read more about Reflection Agents](https://blog.langchain.com/reflection-agents/)
 
+## LangGraph Studio
+
+```
+poetry add "langgraph-cli[inmem]"
+poetry run langgraph dev
+```
+
 ## Table of Contents
 
 - [Overview](#overview)
