@@ -56,4 +56,3 @@ if __name__ == "__main__":
     graph.invoke(
         {"aggregate": [], "which": ""}, {"configurable": {"thread_id": "foo"}}
     )
-langgraph dev
