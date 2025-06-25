@@ -1,0 +1,5 @@
+CHECK_ANSWER = "check_answer"
+EXTRACT = "extract"
+VALIDATE = "validate"
+SAVE = "save"
+RECAP = "recap"
